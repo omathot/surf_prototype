@@ -27,3 +27,5 @@ func _input(event):
 		rotate_y(-event.relative.x * MOUSE_SENSITIVITY)
 		$PlayerCamera.rotate_x(-event.relative.y * MOUSE_SENSITIVITY)
 		$PlayerCamera.rotation.x = clampf($PlayerCamera.rotation.x, -deg_to_rad(70), deg_to_rad(70))
+	if event.is_action_pressed("ui_cancel"):
+		get_tree().quit()
