@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cbjn2ugpolu3t"]
+[gd_scene load_steps=7 format=3 uid="uid://cbjn2ugpolu3t"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_27bip"]
 [ext_resource type="Texture2D" uid="uid://cgc7xpp7n48mg" path="res://icon.svg" id="2_cnop1"]
 [ext_resource type="PackedScene" uid="uid://ckp381pdydx4e" path="res://assets/Weapons/blasterA.glb" id="2_yfyes"]
+[ext_resource type="PackedScene" uid="uid://dobuvga6pklyt" path="res://assets/Weapons/targetA.glb" id="4_khkn0"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xgt5b"]
 
@@ -32,3 +33,8 @@ shape = SubResource("BoxShape3D_pavbs")
 [node name="Sprite3D" type="Sprite3D" parent="StaticBody3D"]
 transform = Transform3D(10, 0, 0, 0, -4.37114e-07, 10, 0, -10, -4.37114e-07, 0, 0, 0)
 texture = ExtResource("2_cnop1")
+
+[node name="targetA2" parent="." instance=ExtResource("4_khkn0")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.198, 1, 4.689)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
