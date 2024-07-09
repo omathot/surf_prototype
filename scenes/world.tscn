@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cbjn2ugpolu3t"]
+[gd_scene load_steps=6 format=3 uid="uid://cbjn2ugpolu3t"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_27bip"]
 [ext_resource type="Texture2D" uid="uid://cgc7xpp7n48mg" path="res://icon.svg" id="2_cnop1"]
+[ext_resource type="PackedScene" uid="uid://ckp381pdydx4e" path="res://assets/Weapons/blasterA.glb" id="2_yfyes"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xgt5b"]
 
@@ -19,6 +20,9 @@ shape = SubResource("CapsuleShape3D_xgt5b")
 
 [node name="PlayerCamera" type="Camera3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+
+[node name="blasterA2" parent="Player/PlayerCamera" instance=ExtResource("2_yfyes")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.406498, -0.340832, -0.61061)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
